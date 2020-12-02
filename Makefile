@@ -1,4 +1,4 @@
-TARGET  := libuthread.a
+TARGET  := libfs.a
 OBJS    := disk.o fs.o
 
 CC      := gcc 
@@ -18,7 +18,7 @@ DEPS := $(patsubst %.o,%.d,$(OBJS))
 
 all: $(TARGET)
 
-libuthread.a: $(OBJS)
+libfs.a: $(OBJS)
 	@echo "AR $@"
 	@ar $(LIBFLAGS) $(TARGET) $^
     
